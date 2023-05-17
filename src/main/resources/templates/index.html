@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- Custom styles for this template -->
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+rel="stylesheet">
+
+</head>
+<body>
+	<div id="wrapper">
+		<h1>Lista de Contatos</h1>
+		
+		
+		<div class="cadastra">
+			<div>
+				<span class="first-span" >Registros:</span>
+				<span class="second-span" th:text="${quantidadeRegistros}"></span> 
+			</div>
+			<a href="novo">Cadastrar nova Pessoa</a>
+		</div>
+		<table id="keywords" cellspacing="0" cellpadding="0" >
+			<thead>
+				<tr>
+					<th><span>Nome</span></th>
+					<th><span>Sobrenome</span></th>
+					<th><span>Idade</span></th>
+					<th><span>Telefone</span></th>
+					<th><span>Endereco</span></th>
+					<th><span>Options</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="pessoa: ${pessoas}">
+					<td class="lalign" th:text="${pessoa.nome}">Nome</td>
+					<td class="lalign" th:text="${pessoa.sobrenome}">Sobrenome</td>
+					<td th:text="${pessoa.idade}">Idade</td>
+					<td th:text="${pessoa.telefone}">Telefone</td>
+					<td th:text="${pessoa.endereco}">Endereço</td>
+					<td><a th:href="@{'/editar/'+ ${pessoa.id}}" class="button green" ><span><i class="fa fa-edit"></i></span></a>
+						<a th:href="@{'/deletar/'+ ${pessoa.id}}" class="button red" onclick="return confirmDelete();"><span><i class="fa fa-trash"></i></span></a></td>
+					
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+	
+	<script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>

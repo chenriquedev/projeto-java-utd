@@ -1,0 +1,150 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#wrapper {
+ display: flex;
+ flex-direction: column;
+ width: 850px;
+ background: #fff;
+ margin: 0 auto;
+ padding: 10px 17px;
+ -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
+ margin-top: 20px;
+ height: 500px;
+ overflow: hidden;
+ overflow-y: scroll
+}
+
+h1{
+	font-family: 'Amarante', Tahoma, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 30px;
+}
+
+table th{
+	background-color:#bfbfbf;
+	padding: 15px;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	font-family: Fira code;
+	font-weight: bold;
+}
+
+table th:not(:last-child){
+	border-right: 1px solid gray;
+}
+
+table td  {
+	text-align: center;
+	border: 1px solid black;
+	height: 20px;
+	font-family: Fira code;
+}
+
+.cadastra{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	margin-bottom: 20px;
+}
+
+.first-span{
+	font-size: 1.3rem;
+	font-family: Fira code;
+}
+.second-span{
+	font-size: 1.3rem;
+	text-decoration: underline;
+}
+
+.cadastra a{
+	font-size: 0.8rem;
+	color: white;
+	text-decoration: none;
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	font-family: Fira code;
+	background-color: black;
+	transition: transform 0.5s ease-in-out;
+}
+
+.cadastra a:hover{
+	transform: scale(1.1);
+}
+
+.button{
+	padding: 10px;
+	text-align: center;
+}
+
+
+td > a{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.button span i{
+	padding: 8px;
+	font-size: 1.3rem;
+	border: 1px solid white;
+	border-radius: 50px;
+	background-color: #c0c0c0;
+	
+}
+
+.green{
+	color: green;
+}
+.red{
+	color: red;
+}

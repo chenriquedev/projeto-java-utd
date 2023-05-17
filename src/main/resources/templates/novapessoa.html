@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/novapessoa.css">
+</head>
+<body>
+	<div id="wrapper">
+		<form action="#" th:action="@{/salvar}" th:object="${pessoa}"
+			method="post">
+			<h1>Cadastrar nova pessoa</h1>
+			<div class="campos">
+				<label>Nome: </label>  <input required type="text"
+					th:field="*{nome}">
+			</div>
+			<div class="campos">
+				<label>Sobrenome: </label> <input required type="text"
+					th:field="*{sobrenome}">
+			</div>
+			<div class="campos">
+				<label>Idade: </label> <input type="number"
+					th:field="*{idade}">
+			</div>
+			<div class="campos">
+				<label>Telefone: </label> <input required type="text"
+					th:field="*{telefone}">
+			</div>
+			<div class="campos">
+				<label>Endereco: </label> <input type="text"
+					th:field="*{endereco}">
+			</div>
+			<div class="buttons">
+				<button class="submitButton button" type="submit">Submit</button>
+				<button class="cancelButton button" onclick="return confirmDelete();"><a href="/" >cancelar</a></button>
+			</div>
+
+		</form>
+	</div>
+	<script type="text/javascript" src="/js/novapessoa.js"></script>
+</body>
+</html>
